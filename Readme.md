@@ -1,5 +1,5 @@
 # FlowerLoading
-Android loading or progress view, just like iOS loading view with a flower.
+Android loading or progress view, just like iOS loading view.
 
 ![demo](http://wx1.sinaimg.cn/mw690/6fb50cedly1fiiiyp7vvfj20k00zkt9s.jpg)
 
