@@ -37,7 +37,7 @@ use loading drawable
     loadingDrawable.start();
 ```
 
-for more usage info, fell free to watch [source code](./loading/src/main/java/name/gudong/loading/LoadingDrawable.java).   
+for more usage info, feel free to watch [source code](./loading/src/main/java/name/gudong/loading/LoadingDrawable.java).
 
 ## Author
 

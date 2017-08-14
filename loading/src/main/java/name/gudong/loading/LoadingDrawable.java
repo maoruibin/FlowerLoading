@@ -40,23 +40,23 @@ import java.lang.ref.WeakReference;
  * create  : 2017/7/6 - 上午10:37.
  */
 public class LoadingDrawable extends Drawable implements ILoading {
-    private static final int default_step = 30;
+    private static final int sDefaultStep = 30;
 
-    private static final int default_duration = 100;
+    private static final int sDefaultDuration = 100;
 
     private Context mContext;
 
     private Handler mHandler;
 
-    private int alpha;
+    private int mAlpha;
     // rotate the picture
     private Bitmap mSource;
     // for rotate
     private Matrix mMatrix = new Matrix();
     // incremental value for each rotation angle
-    private int mRotateStep = default_step;
+    private int mRotateStep = sDefaultStep;
     // each time rotate the animation
-    private int mDuration = default_duration;
+    private int mDuration = sDefaultDuration;
     // current rotate degree
     private int mCurrentDegree = 0;
 
@@ -100,7 +100,9 @@ public class LoadingDrawable extends Drawable implements ILoading {
                 mDrawable.mCurrentDegree = 0;
             }
             mDrawable.doRotateLoading(mDrawable.mCurrentDegree);
-            mDrawable.mHandler.postDelayed(this, mDrawable.mDuration);
+            if (mDrawable.isRunning()){
+                mDrawable.mHandler.postDelayed(this, mDrawable.mDuration);
+            }
         }
     }
 
@@ -118,19 +120,19 @@ public class LoadingDrawable extends Drawable implements ILoading {
     @Override
     public void draw(Canvas canvas) {
         canvas.save();
-        canvas.translate(getBounds().left,getBounds().top);
-        canvas.drawBitmap(mSource,mMatrix,null);
+        canvas.translate(getBounds().left, getBounds().top);
+        canvas.drawBitmap(mSource, mMatrix, null);
         canvas.restore();
     }
 
     @Override
     public void setAlpha(int alpha) {
-        this.alpha = alpha;
+        this.mAlpha = alpha;
     }
 
     @Override
     public int getAlpha() {
-        return alpha;
+        return mAlpha;
     }
 
     @Override
