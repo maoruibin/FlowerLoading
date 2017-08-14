@@ -50,10 +50,10 @@ public class LoadingView extends ImageView implements ILoading {
 
     public LoadingView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-        init(context,attrs);
+        init(context);
     }
 
-    private void init(Context context, AttributeSet attrs) {
+    private void init(Context context) {
         mDrawable = new LoadingDrawable(context);
         //when set src attr
         if (getDrawable() != null) {
