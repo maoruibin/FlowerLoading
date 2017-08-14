@@ -18,6 +18,9 @@ android {
     }
 }
 
+// ./gradlew install
+// ./gradlew bintrayUpload
+
 ext {
     bintrayRepo = 'maven'
     bintrayName = 'loading'

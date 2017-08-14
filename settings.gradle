@@ -1,4 +1,1 @@
 include ':app', ':loading'
-
-// ./gradlew install
-// ./gradlew bintrayUpload
