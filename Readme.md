@@ -3,8 +3,16 @@ Android loading or progress view, just like iOS loading view.
 
 ![demo](http://wx1.sinaimg.cn/mw690/6fb50cedly1fiiiyp7vvfj20k00zkt9s.jpg)
 
+## Install
+
+```gradle
+    compile "name.gudong:loading:1.0.0"
+```
+
 ## Usage
+
 use loading view directly
+
 ```java
     <name.gudong.loading.LoadingView
         android:id="@+id/lv_loading"
@@ -15,21 +23,24 @@ use loading view directly
 use loading drawable
 
 ```java
-        tvLoading = (TextView) findViewById(R.id.tv_loading);
-        //init loading drawable
-        LoadingDrawable loadingDrawable = new LoadingDrawable(this);
-        //set loading drawable
-        tvLoading.setBackground(loadingDrawable);
-        // start loading anim
-        loadingDrawable.start();
+    tvLoading = (TextView) findViewById(R.id.tv_loading);
+    //init loading drawable
+    LoadingDrawable loadingDrawable = new LoadingDrawable(this);
+    //set loading drawable
+    tvLoading.setBackground(loadingDrawable);
+    // start loading anim
+    loadingDrawable.start();
 ```
 
+for more usage info, fell free to watch [source code](./loading/src/main/java/name/gudong/loading/LoadingDrawable.java).   
+
 ## Author
-[http://gudong.name](http://gudong.name)
 
-[https://github.com/maoruibin](https://github.com/maoruibin)
+- blog&nbsp;&nbsp;&nbsp;&nbsp;[http://gudong.name](http://gudong.name)
 
-[http://weibo.com/maoruibin](http://weibo.com/maoruibin)
+- github [https://github.com/maoruibin](https://github.com/maoruibin)
+
+- weibo&nbsp;&nbsp;[http://weibo.com/maoruibin](http://weibo.com/maoruibin)
 
 ## License
 
