@@ -6,7 +6,7 @@ Android loading or progress view, just like iOS loading view.
 [ ![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
 
 
-![demo](http://wx1.sinaimg.cn/mw690/6fb50cedly1fiiiyp7vvfj20k00zkt9s.jpg)
+![demo](http://wx3.sinaimg.cn/mw690/6fb50cedly1fimz9c1wj7g20au0j2jwr.gif)
 
 ## Install
 

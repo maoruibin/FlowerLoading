@@ -77,6 +77,9 @@ public class LoadingDrawable extends Drawable implements ILoading {
     public LoadingDrawable(Context context, int resDrawable) {
         this.mContext = context;
         this.mSource = BitmapFactory.decodeResource(mContext.getResources(), resDrawable);
+        if (mSource.getWidth() != mSource.getHeight()) {
+            throw new IllegalStateException("drawable must have same width and height.");
+        }
         mHandler = new Handler();
         mLoadingTask = new LoadingTask(this);
     }
@@ -188,10 +191,6 @@ public class LoadingDrawable extends Drawable implements ILoading {
                     + " h =" + h);
         }
         mCenterXY = w / 2;
-        if (drawableWidth != drawableHeight) {
-            throw new IllegalStateException("drawable must have same width and height, now " +
-                    "drawableWidth = " + drawableWidth + " drawableHeight=" + drawableHeight);
-        }
 
         // when view's size little than loading image size, the drawable need scale
         if (w <= drawableWidth) {
