@@ -1,6 +1,5 @@
 # FlowerLoading [ ![Download](https://api.bintray.com/packages/gudong/maven/loading/images/download.svg) ](https://bintray.com/gudong/maven/loading/_latestVersion)   ![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)  [ ![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
 
---------
 Android loading or progress view, just like iOS loading view.
 
 ![demo](http://wx3.sinaimg.cn/mw690/6fb50cedly1fimz9c1wj7g20au0j2jwr.gif)
