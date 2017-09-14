@@ -2,7 +2,7 @@
 
 一个自定义 View，类似 iOS 上转菊花动画效果 | [English](/doc/Readme-en.md)
 
-![demo](http://wx3.sinaimg.cn/mw690/6fb50cedly1fimz9c1wj7g20au0j2jwr.gif)
+![demo](http://7xr9gx.com1.z0.glb.clouddn.com/action_button.gif)
 
 ## 原理
 

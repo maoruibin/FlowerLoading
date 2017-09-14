@@ -2,7 +2,7 @@
 
 Android loading or progress view, just like iOS loading view.
 
-![demo](http://wx3.sinaimg.cn/mw690/6fb50cedly1fimz9c1wj7g20au0j2jwr.gif)
+![demo](http://7xr9gx.com1.z0.glb.clouddn.com/action_button.gif)
 
 ## Install
 
