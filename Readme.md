@@ -7,6 +7,7 @@
 ## 原理
 
 对一张原始的菊花图片不停的做固定角度的旋转，从而产生视觉的转菊花效果，原图如下所示
+
 ![icon](/loading/src/main/res/drawable-xhdpi/loading_drawable.png)
 
 
@@ -28,7 +29,7 @@ LoadingView 默认使用一个灰色的菊花资源，一圈时长 1200 ms。
 
 只要 View 处于显示状态，动画就会执行，View 隐藏动画自动停止。如果不想使用该特性，可以通过 setIsAutoPlayAnim 方法进行关闭。
 
-同时为了提供更加独立的绘制功能，这里还提供了对应 LoadingDrawable, 方便在其他 View 上灵活的显示转菊花效果，如[ActionButton](https://github.com/maoruibin/ActionButton)所示，就可以在一个 Button 中灵活映入 LoadingDrawable，
+同时为了提供更加独立的绘制功能，这里还提供了对应 LoadingDrawable, 方便在其他 View 上灵活的显示转菊花效果，如[ActionButton](https://github.com/maoruibin/ActionButton) 所示，就可以在一个 Button 中灵活映入 LoadingDrawable，
 从而实现加载效果。具体使用如下所示：
 
 ```java
@@ -44,6 +45,8 @@ LoadingView 默认使用一个灰色的菊花资源，一圈时长 1200 ms。
 ## 方法介绍
 
 ### 共有方法
+
+方法名 | 介绍
 ---- | ---
 setLoadingDrawable | 设置旋转图片资源 
 setDuration |  设置旋转一圈的时长
