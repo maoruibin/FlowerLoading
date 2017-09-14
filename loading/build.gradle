@@ -34,7 +34,7 @@ ext {
     siteUrl = 'https://github.com/maoruibin/FlowerLoading'
     gitUrl = 'https://github.com/maoruibin/FlowerLoading.git'
 
-    libraryVersion = '1.0.0'
+    libraryVersion = '1.1.0'
 
     developerId = 'maoruibin'
     developerName = 'gudong'
