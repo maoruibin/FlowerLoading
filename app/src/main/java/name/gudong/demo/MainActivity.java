@@ -42,6 +42,9 @@ public class MainActivity extends AppCompatActivity {
         tvLoading = (TextView) findViewById(R.id.tv_loading);
         //init loading drawable
         LoadingDrawable loadingDrawable = new LoadingDrawable(this);
+        loadingDrawable.setLoadingDrawable(R.drawable.loading_progress_grey);
+        loadingDrawable.setDivideCount(30);
+        loadingDrawable.setDuration(500);
         //set loading drawable
         tvLoading.setBackground(loadingDrawable);
         // start loading anim

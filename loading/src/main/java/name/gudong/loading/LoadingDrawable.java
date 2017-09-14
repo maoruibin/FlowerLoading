@@ -40,9 +40,9 @@ import java.lang.ref.WeakReference;
  * create  : 2017/7/6 - 上午10:37.
  */
 public class LoadingDrawable extends Drawable implements ILoading {
-    private static final int sDefaultStep = 30;
+    private static final int sDefaultDivideCount = 12;
 
-    private static final int sDefaultDuration = 100;
+    private static final int sDefaultDuration = 1200;
 
     private Context mContext;
 
@@ -53,9 +53,8 @@ public class LoadingDrawable extends Drawable implements ILoading {
     private Bitmap mSource;
     // for rotate
     private Matrix mMatrix = new Matrix();
-    // incremental value for each rotation angle
-    private int mRotateStep = sDefaultStep;
-    // each time rotate the animation
+    // duration of animation time
+    // 转一圈动画的时长
     private int mDuration = sDefaultDuration;
     // current rotate degree
     private int mCurrentDegree = 0;
@@ -67,6 +66,8 @@ public class LoadingDrawable extends Drawable implements ILoading {
     private int mCenterXY;
     // anim is running
     private boolean isAnimRunning = false;
+    // anim divide count size, as default it should be average 12
+    private int mAverageCount = sDefaultDivideCount;
 
     private LoadingTask mLoadingTask;
 
@@ -84,7 +85,6 @@ public class LoadingDrawable extends Drawable implements ILoading {
         mLoadingTask = new LoadingTask(this);
     }
 
-
     private static class LoadingTask implements Runnable {
         WeakReference<LoadingDrawable> mWeakDrawable;
 
@@ -98,13 +98,13 @@ public class LoadingDrawable extends Drawable implements ILoading {
             if (mDrawable == null) {
                 return;
             }
-            mDrawable.mCurrentDegree += mDrawable.mRotateStep;
+            mDrawable.mCurrentDegree += mDrawable.getRotateStep();
             if (mDrawable.mCurrentDegree >= 360) {
                 mDrawable.mCurrentDegree = 0;
             }
             mDrawable.doRotateLoading(mDrawable.mCurrentDegree);
-            if (mDrawable.isRunning()){
-                mDrawable.mHandler.postDelayed(this, mDrawable.mDuration);
+            if (mDrawable.isRunning()) {
+                mDrawable.mHandler.postDelayed(this, mDrawable.getRotateStepTime());
             }
         }
     }
@@ -224,8 +224,8 @@ public class LoadingDrawable extends Drawable implements ILoading {
     }
 
     @Override
-    public void setRotateStep(int rotateStep) {
-        this.mRotateStep = rotateStep;
+    public void setDivideCount(int divideCount) {
+        this.mAverageCount = divideCount;
     }
 
 
@@ -244,8 +244,26 @@ public class LoadingDrawable extends Drawable implements ILoading {
         doRotateLoading(currentDegree);
     }
 
+    /**
+     * get the angle of rotation increment
+     * 获取旋转递增角度
+     * @return 每一次递增角度
+     */
+    private int getRotateStep(){
+        return 360 / mAverageCount;
+    }
+
+    /**
+     * Gets the length of each incremental animation
+     * 获取每次递增动画时长（总时长 / 均分数）
+     * @return 每次递增动画时长
+     */
+    private int getRotateStepTime(){
+        return mDuration / mAverageCount;
+    }
+
     private Bitmap drawableToBitmap(Drawable drawable) {
-        Bitmap bitmap = null;
+        Bitmap bitmap;
 
         if (drawable instanceof BitmapDrawable) {
             BitmapDrawable bitmapDrawable = (BitmapDrawable) drawable;

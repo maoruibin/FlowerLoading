@@ -100,8 +100,8 @@ public class LoadingView extends ImageView implements ILoading {
     }
 
     @Override
-    public void setRotateStep(int rotateStep) {
-        mDrawable.setRotateStep(rotateStep);
+    public void setDivideCount(int divideCount) {
+        mDrawable.setDivideCount(divideCount);
     }
 
     @Override

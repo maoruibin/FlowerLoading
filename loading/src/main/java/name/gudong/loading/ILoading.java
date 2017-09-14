@@ -35,9 +35,10 @@ interface ILoading extends Animatable {
 
     /**
      * set rotate the incremental angle
-     * @param rotateStep
+     * 设置均分了多少
+     * @param divideCount
      */
-    void setRotateStep(int rotateStep);
+    void setDivideCount(int divideCount);
 
     void setLoadingDrawable(int resDrawable);
 
