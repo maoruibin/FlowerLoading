@@ -1,22 +1,19 @@
 # FlowerLoading [ ![Download](https://api.bintray.com/packages/gudong/maven/loading/images/download.svg) ](https://bintray.com/gudong/maven/loading/_latestVersion)   ![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)  [ ![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
 
-一个自定义 View，类似 iOS 上转菊花动画效果 | [English](/doc/Readme-en.md)
+Android loading or progress view, just like iOS loading view.
 
 ![demo](http://wx3.sinaimg.cn/mw690/6fb50cedly1fimz9c1wj7g20au0j2jwr.gif)
 
-## 原理
-
-对一张原始的菊花图片不停的做固定角度的旋转，从而产生视觉的转菊花效果，原图如下所示
-![icon](/loading/src/main/res/drawable-xhdpi/loading_drawable.png)
-
-
-## 使用
+## Install
 
 ```gradle
     compile "name.gudong:loading:1.0.0"
 ```
 
-这里可以通过布局引入 LoadingView，如下所示
+## Usage
+
+use loading view directly
+
 ```java
     <name.gudong.loading.LoadingView
         android:id="@+id/lv_loading"
@@ -24,12 +21,7 @@
         android:layout_height="wrap_content"/>
 ```
 
-LoadingView 默认使用一个灰色的菊花资源，一圈时长 1200 ms。
-
-只要 View 处于显示状态，动画就会执行，View 隐藏动画自动停止。如果不想使用该特性，可以通过 setIsAutoPlayAnim 方法进行关闭。
-
-同时为了提供更加独立的绘制功能，这里还提供了对应 LoadingDrawable, 方便在其他 View 上灵活的显示转菊花效果，如[ActionButton](https://github.com/maoruibin/ActionButton)所示，就可以在一个 Button 中灵活映入 LoadingDrawable，
-从而实现加载效果。具体使用如下所示：
+use loading drawable
 
 ```java
     tvLoading = (TextView) findViewById(R.id.tv_loading);
@@ -41,26 +33,7 @@ LoadingView 默认使用一个灰色的菊花资源，一圈时长 1200 ms。
     loadingDrawable.start();
 ```
 
-## 方法介绍
-
-### 共有方法
----- | ---
-setLoadingDrawable | 设置旋转图片资源 
-setDuration |  设置旋转一圈的时长
-setDivideCount |  设置一次动画被切割成多少份
-start | 播放动画 
-stop | 停止动画 
-isRunning | 动画是否在执行 
-
-### LoadingView 特有方法
-
-方法名 | 介绍
----- | ---
-setIsAutoPlayAnim | 设置是否启用自动播放动画的功能 
-setMax | 设置旋转最大进度 
-setProgress | 设置当前旋转进度 
-
-更多细节，请查看[源码](./loading/src/main/java/name/gudong/loading/LoadingDrawable.java).
+for more usage info, feel free to watch [source code](./loading/src/main/java/name/gudong/loading/LoadingDrawable.java).
 
 ## Author
 
