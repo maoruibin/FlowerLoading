@@ -2,7 +2,7 @@
 
 Android 上实现的 iOS 转菊花动画效果 | [English](/doc/Readme-en.md)
 
-![demo](http://7xr9gx.com1.z0.glb.clouddn.com/flower_real.gif)
+![demo](http://7xr9gx.com1.z0.glb.clouddn.com/flower_real_right.gif)
 
 ## 原理
 
