@@ -11,7 +11,7 @@ On a picture of the original flower kept a fixed angle of rotation, resulting in
 ## Usage
 
 ```gradle
-    compile "name.gudong:loading:1.1.0"
+    compile "name.gudong:loading:1.1.1"
 ```
 
 Introduce the LoadingView through the layout, as shown below:
