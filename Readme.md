@@ -47,6 +47,7 @@ LoadingDrawable 使用方法如下所示：
 ## 方法介绍
 
 ### 共有方法
+LoadingView 跟 LoadingDrawable 的大多数方法一致，只是 LoadingView 会有少数几个特殊的方法。
 
 方法名 | 介绍
 ---- | ---
@@ -69,7 +70,7 @@ setIsAutoPlayAnim 介绍
 > 默认只要 LoadingView 处于显示状态，动画就会执行，隐藏则动画自动停止。如果不想使用该特性，可以通过 setIsAutoPlayAnim 方法进行关闭。
 
 
-更多细节，请查看[源码](./loading/src/main/java/name/gudong/loading/LoadingDrawable.java).
+更多细节，请查看[源码](./loading/src/main/java/name/gudong/loading/LoadingDrawable.java)。
 
 ## Author
 
