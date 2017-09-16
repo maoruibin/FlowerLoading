@@ -66,7 +66,7 @@ setMax | 设置旋转最大进度
 setProgress | 设置当前旋转进度 
 
 setIsAutoPlayAnim 介绍
->>> 默认只要 LoadingView 处于显示状态，动画就会执行，隐藏则动画自动停止。如果不想使用该特性，可以通过 setIsAutoPlayAnim 方法进行关闭。
+> 默认只要 LoadingView 处于显示状态，动画就会执行，隐藏则动画自动停止。如果不想使用该特性，可以通过 setIsAutoPlayAnim 方法进行关闭。
 
 
 更多细节，请查看[源码](./loading/src/main/java/name/gudong/loading/LoadingDrawable.java).
