@@ -1,6 +1,6 @@
 # FlowerLoading [ ![Download](https://api.bintray.com/packages/gudong/maven/loading/images/download.svg) ](https://bintray.com/gudong/maven/loading/_latestVersion)   ![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)  [ ![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
 
-Android 上实现的 iOS 转菊花动画效果 | [English](/doc/Readme-en.md)
+一个常见的转菊花动画效果 | [English](/doc/Readme-en.md)
 
 ![demo](http://7xr9gx.com1.z0.glb.clouddn.com/flower_real_right.gif)
 
