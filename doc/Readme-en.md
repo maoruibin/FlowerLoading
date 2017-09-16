@@ -61,12 +61,12 @@ isRunning | anim is running or not
 
 method | introduce
 ---- | ---
-setIsAutoPlayAnim | Set whether to enable auto-play animation 
+enableAutoPlayAnim | Set whether to enable auto-play animation 
 setMax | set max progress 
 setProgress | set current progress 
 
-setIsAutoPlayAnim introduce
-> By default, if the LoadingView is in the display state, the animation will be executed and the animation will automatically stop. If you do not want to use this feature, you can use the setIsAutoPlayAnim method to close.
+enableAutoPlayAnim 
+> By default, if the LoadingView is in the display state, the animation will be executed and the animation will automatically stop. If you do not want to use this feature, you can use the this method to close.
 
 
 For more usage info, feel free to watch [source code](./loading/src/main/java/name/gudong/loading/LoadingDrawable.java)。

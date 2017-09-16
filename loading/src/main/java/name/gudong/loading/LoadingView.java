@@ -26,7 +26,7 @@ import android.widget.ImageView;
 
 /**
  * author  : gudong (gudong.name@gmail.com)
- * version : 1.0.0
+ * version : 1.1.1
  * create  : 2017/7/26 - 上午10:37.
  */
 public class LoadingView extends ImageView implements ILoading {
@@ -36,7 +36,7 @@ public class LoadingView extends ImageView implements ILoading {
     /**
      * 是不是根据 View 显示隐藏状态自动开启停止动画
      */
-    private boolean isAutoAnim = true;
+    private boolean autoPlayAnimFlag = true;
 
     private LoadingDrawable mDrawable;
 
@@ -67,18 +67,18 @@ public class LoadingView extends ImageView implements ILoading {
      * @param flag if true, anim will depend on View's visible status, visible anim will play else will be stop, if false,
      *             anim status is control by user, use start() or stop
      */
-    public void setIsAutoPlayAnim(boolean flag) {
-        this.isAutoAnim = flag;
+    public void enableAutoPlayAnim(boolean flag) {
+        this.autoPlayAnimFlag = flag;
     }
 
-    public boolean isAutoAnim() {
-        return isAutoAnim;
+    public boolean isEnableAutoPlayAnim() {
+        return autoPlayAnimFlag;
     }
 
     @Override
     protected void onVisibilityChanged(View changedView, int visibility) {
         super.onVisibilityChanged(changedView, visibility);
-        if (!isAutoAnim()) {
+        if (!isEnableAutoPlayAnim()) {
             return;
         }
         if(visibility == View.VISIBLE){
@@ -132,7 +132,7 @@ public class LoadingView extends ImageView implements ILoading {
     }
 
     public void setProgress(int progress) {
-        if(isAutoAnim){
+        if(autoPlayAnimFlag){
             throw new IllegalStateException("please make auto anim flag as false, use setIsAutoPlayAnim method");
         }
         if(max != 0){
