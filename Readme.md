@@ -11,7 +11,7 @@
 ## 使用
 
 ```gradle
-    compile "name.gudong:loading:1.0.0"
+    compile "name.gudong:loading:1.1.0"
 ```
 
 通过布局引入 LoadingView，如下所示
