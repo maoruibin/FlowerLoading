@@ -27,9 +27,18 @@
     android:orientation="vertical"
     tools:context="name.gudong.demo.MainActivity">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="下拉旋转顶部菊花"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:textColor="#ccc"/>
+
     <android.support.v4.widget.Space
         android:layout_width="wrap_content"
         android:layout_height="20dp"/>
+
 
     <name.gudong.loading.LoadingView
         android:id="@+id/lv_loading"
