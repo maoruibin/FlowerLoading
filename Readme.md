@@ -25,7 +25,7 @@
 
 FlowerLoading 默认提供一个灰色的菊花资源，转一圈默认时长 1200ms.
 
-为了提供更加独立的绘制特性，FlowerLoading 还提供了对应 LoadingDrawable, 以便在其他 View 上通过background 设置转菊花效果，如[ActionButton](https://github.com/maoruibin/ActionButton) 这个项目，通过引入该库，灵活的实现了加载效果。
+为了提供更加独立的绘制特性，FlowerLoading 还提供了对应 LoadingDrawable, 以便在其他 View 上通过background 设置转菊花效果，如 [ActionButton](https://github.com/maoruibin/ActionButton) 这个项目，通过引入该库，灵活的实现了加载效果。
 
 
 LoadingDrawable 使用方法如下所示：
